@@ -1,8 +1,7 @@
 /* ===========================
-   style.css – Ajeet Verma Resume
-   =========================== */
+   Global Styles
+=========================== */
 
-/* --- 1. Global Reset & Base Styles --- */
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +9,15 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #f4f6f9;
     color: #333333;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 a {
-    color: #2563eb;
+    color: #1a73e8;
     text-decoration: none;
 }
 
@@ -25,26 +25,29 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- 2. Navigation Bar (ID selector) --- */
+
+/* ===========================
+   Navigation Bar
+=========================== */
+
 #navbar {
-    background-color: #1e293b;
+    background-color: #1b2a4a;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 48px;
+    padding: 16px 40px;
     position: sticky;
     top: 0;
 }
 
 .nav-name {
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #ffffff;
     letter-spacing: 1px;
 }
 
-/* Class selector for nav links list */
 .nav-links {
     list-style: none;
     display: flex;
@@ -52,231 +55,213 @@ a:hover {
 }
 
 .nav-links li a {
-    color: #cbd5e1;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    transition: color 0.2s;
+    color: #c9d6e8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .nav-links li a:hover {
-    color: #38bdf8;
+    color: #ffffff;
     text-decoration: none;
 }
 
-/* --- 3. Hero / Header Section (ID selector) --- */
+
+/* ===========================
+   Hero / About Section
+=========================== */
+
 #about {
-    background-color: #1e3a5f;
-    color: #ffffff;
+    background-color: #1b2a4a;
     text-align: center;
     padding: 70px 20px 60px;
 }
 
-#about h1 {
+.hero-box h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .tagline {
-    font-size: 18px;
-    font-weight: 300;
-    color: #93c5fd;
-    margin-bottom: 28px;
+    font-size: 17px;
+    color: #a8c0e0;
+    margin-bottom: 24px;
 }
 
-/* Class selector for contact row */
 .contact-row {
     display: flex;
     justify-content: center;
-    gap: 28px;
+    gap: 24px;
     flex-wrap: wrap;
     font-size: 14px;
+    color: #c9d6e8;
 }
 
 .contact-row a {
-    color: #bfdbfe;
+    color: #7eb8f7;
 }
 
 .contact-row a:hover {
     color: #ffffff;
-    text-decoration: underline;
 }
 
-/* --- 4. Main Content Area --- */
-main {
+
+/* ===========================
+   Sections
+=========================== */
+
+.section {
+    padding: 50px 60px;
     max-width: 960px;
-    margin: 40px auto;
-    padding: 0 24px;
+    margin: 0 auto;
 }
 
-/* --- 5. Section Titles (element + class selectors) --- */
-section {
-    margin-bottom: 50px;
+.section-alt {
+    background-color: #eaf0fb;
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.section-alt .section-title,
+.section-alt .card,
+.section-alt .skills-grid {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .section-title {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: #1e3a5f;
-    border-left: 5px solid #2563eb;
-    padding-left: 14px;
+    color: #1b2a4a;
     margin-bottom: 24px;
+    border-left: 5px solid #1a73e8;
+    padding-left: 12px;
 }
 
-.sub-section-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #334155;
-    margin-top: 28px;
-    margin-bottom: 12px;
-}
 
-/* --- 6. Cards (class selector) --- */
-.cards-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+/* ===========================
+   Cards
+=========================== */
 
 .card {
     background-color: #ffffff;
-    border-radius: 10px;
-    padding: 22px 24px;
-    flex: 1;
-    min-width: 220px;
-    border-top: 4px solid #2563eb;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 16px;
+    border: 1px solid #dde3ed;
 }
 
-.card-year {
-    font-size: 12px;
-    font-weight: 700;
-    color: #2563eb;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+.section-alt .card {
+    background-color: #ffffff;
+    padding-left: 26px;
+    padding-right: 26px;
 }
 
-.card-heading {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #1e293b;
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 6px;
 }
 
-.card-sub {
+.card-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1b2a4a;
+}
+
+.year {
+    font-size: 13px;
+    color: #ffffff;
+    background-color: #1a73e8;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.institution {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a73e8;
+    margin-bottom: 4px;
+}
+
+.detail {
     font-size: 14px;
-    color: #64748b;
-    margin-bottom: 8px;
+    color: #555555;
 }
 
-.card-detail {
-    font-size: 14px;
-    color: #475569;
-}
-
-/* --- 7. Certification Cards (class selector) --- */
-.cert-card {
-    border-top-color: #0ea5e9;
-}
-
-.cert-id {
-    font-size: 11px;
-    color: #94a3b8;
-    margin-top: 8px;
-    font-style: italic;
-}
-
-/* --- 8. Achievement List (element selector) --- */
 .achievement-list {
     list-style: none;
     padding: 0;
 }
 
 .achievement-list li {
-    background-color: #ffffff;
-    padding: 12px 18px;
-    border-radius: 8px;
-    margin-bottom: 10px;
     font-size: 15px;
-    color: #334155;
-    border-left: 4px solid #38bdf8;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    color: #333333;
+    padding: 6px 0;
+    border-bottom: 1px solid #eef1f7;
 }
 
-/* --- 9. Experience Block (class selector) --- */
-.experience-block {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 26px 28px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-    border-top: 4px solid #2563eb;
+.achievement-list li:last-child {
+    border-bottom: none;
 }
 
-.exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
-.exp-date {
-    font-size: 13px;
-    font-weight: 700;
-    color: #2563eb;
-    background-color: #eff6ff;
-    padding: 4px 12px;
-    border-radius: 20px;
-    white-space: nowrap;
-}
+/* ===========================
+   Skills Grid
+=========================== */
 
-/* Class selector for experience bullet list */
-.exp-list {
-    padding-left: 20px;
-}
-
-.exp-list li {
-    font-size: 14px;
-    color: #475569;
-    margin-bottom: 8px;
-}
-
-/* --- 10. Skills Grid (class selector) --- */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
 }
 
-.skill-tag {
-    background-color: #1e3a5f;
-    color: #e2e8f0;
-    font-size: 13px;
-    padding: 8px 18px;
-    border-radius: 25px;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-}
-
-/* --- 11. Footer (ID selector) --- */
-#footer {
-    background-color: #1e293b;
-    color: #94a3b8;
+.skill-card {
+    background-color: #ffffff;
+    border: 1px solid #dde3ed;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1b2a4a;
+    width: calc(33% - 12px);
     text-align: center;
-    padding: 24px;
-    font-size: 13px;
+}
+
+.skill-sub {
+    font-size: 12px;
+    font-weight: 400;
+    color: #777777;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* ===========================
+   Footer
+=========================== */
+
+#footer {
+    background-color: #1b2a4a;
+    text-align: center;
+    padding: 24px 20px;
+    color: #8a9bbf;
+    font-size: 14px;
 }
 
 #footer a {
-    color: #93c5fd;
+    color: #7eb8f7;
 }
 
 #footer a:hover {
