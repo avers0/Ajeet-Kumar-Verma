@@ -1,0 +1,284 @@
+/* ===========================
+   style.css – Ajeet Verma Resume
+   =========================== */
+
+/* --- 1. Global Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.7;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- 2. Navigation Bar (ID selector) --- */
+#navbar {
+    background-color: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    position: sticky;
+    top: 0;
+}
+
+.nav-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Class selector for nav links list */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links li a {
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* --- 3. Hero / Header Section (ID selector) --- */
+#about {
+    background-color: #1e3a5f;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 20px 60px;
+}
+
+#about h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.tagline {
+    font-size: 18px;
+    font-weight: 300;
+    color: #93c5fd;
+    margin-bottom: 28px;
+}
+
+/* Class selector for contact row */
+.contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.contact-row a {
+    color: #bfdbfe;
+}
+
+.contact-row a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- 4. Main Content Area --- */
+main {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* --- 5. Section Titles (element + class selectors) --- */
+section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e3a5f;
+    border-left: 5px solid #2563eb;
+    padding-left: 14px;
+    margin-bottom: 24px;
+}
+
+.sub-section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+/* --- 6. Cards (class selector) --- */
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 22px 24px;
+    flex: 1;
+    min-width: 220px;
+    border-top: 4px solid #2563eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.card-year {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.card-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.card-sub {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.card-detail {
+    font-size: 14px;
+    color: #475569;
+}
+
+/* --- 7. Certification Cards (class selector) --- */
+.cert-card {
+    border-top-color: #0ea5e9;
+}
+
+.cert-id {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* --- 8. Achievement List (element selector) --- */
+.achievement-list {
+    list-style: none;
+    padding: 0;
+}
+
+.achievement-list li {
+    background-color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #334155;
+    border-left: 4px solid #38bdf8;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* --- 9. Experience Block (class selector) --- */
+.experience-block {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 26px 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    border-top: 4px solid #2563eb;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.exp-date {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2563eb;
+    background-color: #eff6ff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+/* Class selector for experience bullet list */
+.exp-list {
+    padding-left: 20px;
+}
+
+.exp-list li {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+/* --- 10. Skills Grid (class selector) --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    background-color: #1e3a5f;
+    color: #e2e8f0;
+    font-size: 13px;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+/* --- 11. Footer (ID selector) --- */
+#footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+}
+
+#footer a {
+    color: #93c5fd;
+}
+
+#footer a:hover {
+    color: #ffffff;
+}
