@@ -18,141 +18,134 @@ body {
 
 a {
   text-decoration: none;
-  color: #c0152a;
+  color: #ffffff;
 }
 
 a:hover {
-  color: #8b0000;
+  color: #fcd5d9;
 }
 
 p {
-  margin-bottom: 0.4rem;
-}
-
-strong {
-  font-weight: 600;
+  margin-bottom: 0.3rem;
 }
 
 /* ============================================
    ID SELECTORS
    ============================================ */
 
-/* Navbar — Flexbox */
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2.5rem;
-  background-color: #c0152a;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-/* Hero — 100vh viewport unit + Flexbox */
-#hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* Top banner — Flexbox column, centered */
+#top-banner {
   background-color: #c0152a;
   color: #ffffff;
-  padding: 2rem;
+  text-align: center;
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-#footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #c0152a;
+#top-banner h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+#banner-degree {
+  font-size: 0.9rem;
   color: #fcd5d9;
+}
+
+/* Contact row — Flexbox */
+#contact-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
   font-size: 0.85rem;
-  margin-top: 3rem;
+  color: #fcd5d9;
+  margin-top: 0.25rem;
+}
+
+#contact-row span {
+  color: #fcd5d9;
+}
+
+/* Skills strip — Flexbox wrap */
+#skills-strip {
+  background-color: #1a0000;
+  padding: 0.85rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+/* Page body — 100vh viewport unit */
+#page-body {
+  min-height: 100vh;
+  background-color: #ffffff;
 }
 
 /* ============================================
    CLASS SELECTORS
    ============================================ */
 
-/* --- Navbar --- */
-.nav-brand {
+/* --- Skill tags --- */
+.skill-tag {
+  background-color: #c0152a;
   color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  padding: 0.25rem 0.8rem;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  font-weight: 500;
 }
 
-/* Flexbox for nav links */
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  color: #fcd5d9;
-  font-size: 0.875rem;
-}
-
-.nav-links a:hover {
+/* --- Section bar (full-width red heading) --- */
+.section-bar {
+  background-color: #c0152a;
   color: #ffffff;
-}
-
-/* --- Hero --- */
-#hero h1 {
-  font-size: 3rem;
+  padding: 0.5rem 2rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
-}
-
-.hero-sub {
-  color: #fcd5d9;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Flexbox for contact bar */
-.contact-bar {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contact-bar a,
-.contact-bar span {
-  color: #fcd5d9;
-  font-size: 0.875rem;
-}
-
-.contact-bar a:hover {
-  color: #ffffff;
-}
-
-/* --- Section label --- */
-.section-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #c0152a;
-  border-bottom: 2px solid #c0152a;
-  padding-bottom: 0.4rem;
-  margin-bottom: 1.25rem;
+  margin-top: 2rem;
 }
 
-/* --- Education rows --- */
-.edu-row {
-  padding: 0.9rem 0;
+/* --- Section content wrapper --- */
+.section-content {
+  padding: 1.5rem 2rem;
+}
+
+/* --- Education cards — Bootstrap col-4 grid --- */
+.edu-card {
+  border-left: 3px solid #c0152a;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  height: 100%;
+}
+
+/* --- Experience blocks --- */
+.exp-block {
+  padding: 0.75rem 0;
   border-bottom: 1px solid #e2e8f0;
 }
 
-/* --- Shared text classes --- */
+/* Flexbox for exp header */
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+}
+
+/* --- Shared text --- */
 .role {
   font-weight: 600;
   font-size: 0.95rem;
-  margin-bottom: 0.15rem;
 }
 
 .org {
@@ -163,7 +156,11 @@ strong {
 .meta {
   color: #94a3b8;
   font-size: 0.8rem;
-  margin-top: 0.25rem;
+}
+
+.body-text {
+  color: #475569;
+  font-size: 0.875rem;
 }
 
 .year-tag {
@@ -171,57 +168,22 @@ strong {
   background-color: #c0152a;
   color: #ffffff;
   padding: 0.15rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.78rem;
-  font-weight: 600;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
-/* --- Experience / Prof Dev cards --- */
-.card-block {
-  padding: 0.9rem 0;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-/* Flexbox for card header */
-.card-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.4rem;
-}
-
-.card-body-text {
-  color: #475569;
-  font-size: 0.875rem;
-}
-
-/* --- Skills — Flexbox wrap --- */
-.skills-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.skill-tag {
-  background-color: #fff0f1;
-  color: #c0152a;
-  padding: 0.3rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.78rem;
-  font-weight: 500;
-}
-
-/* --- Certification cards --- */
+/* --- Certification cards — Bootstrap col-4 grid --- */
 .cert-card {
-  background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 1.25rem;
+  border-top: 3px solid #c0152a;
+  padding: 1rem;
   height: 100%;
 }
 
 .cert-name {
   font-weight: 600;
   font-size: 0.9rem;
-  margin-bottom: 0.3rem;
+  color: #c0152a;
+  margin-bottom: 0.2rem;
 }

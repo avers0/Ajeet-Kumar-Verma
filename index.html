@@ -11,139 +11,104 @@
 </head>
 <body>
 
-  <!-- NAV — Flexbox -->
-  <nav id="navbar">
-    <span class="nav-brand">AKV</span>
-    <div class="nav-links">
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
-    </div>
-  </nav>
-
-  <!-- HERO — 100vh viewport unit + Flexbox -->
-  <section id="hero">
+  <!-- TOP BANNER — Flexbox, centered -->
+  <header id="top-banner">
     <h1>Ajeet Kumar Verma</h1>
-    <p class="hero-sub">BBA · Digital Business &amp; Entrepreneurship · IIM Bangalore</p>
-    <div class="contact-bar">
+    <p id="banner-degree">BBA &nbsp;·&nbsp; Digital Business &amp; Entrepreneurship &nbsp;·&nbsp; IIM Bangalore</p>
+    <div id="contact-row">
       <a href="mailto:ajeetverma0012@gmail.com">ajeetverma0012@gmail.com</a>
       <span>+91 8889870556</span>
       <a href="https://www.linkedin.com/in/ajeet-verma-459230245" target="_blank">LinkedIn</a>
       <a href="https://ajeetvers.carrd.co" target="_blank">Portfolio</a>
     </div>
-  </section>
+  </header>
 
-  <!-- MAIN — Bootstrap 12-column grid -->
-  <main class="container py-5">
+  <!-- SKILLS STRIP — Flexbox wrap -->
+  <div id="skills-strip">
+    <span class="skill-tag">Social Media Management</span>
+    <span class="skill-tag">Instagram &nbsp;·&nbsp; Facebook &nbsp;·&nbsp; LinkedIn</span>
+    <span class="skill-tag">Canva &nbsp;·&nbsp; CapCut</span>
+    <span class="skill-tag">Graphic Design &amp; Video Editing</span>
+    <span class="skill-tag">IG Insights Analytics</span>
+    <span class="skill-tag">Copywriting &amp; Hashtag Strategy</span>
+    <span class="skill-tag">Trend Research</span>
+    <span class="skill-tag">Creative Concepts</span>
+  </div>
 
-    <!-- EDUCATION — full width col-12 -->
-    <section id="education" class="mb-5">
-      <h2 class="section-label">Education</h2>
+  <!-- MAIN BODY — min-height: 100vh viewport unit -->
+  <div id="page-body">
+
+    <!-- EDUCATION -->
+    <div class="section-bar">Education</div>
+    <div class="section-content">
       <div class="row">
-        <div class="col-12">
-          <div class="edu-row">
-            <div class="row">
-              <div class="col-8">
-                <p class="role">BBA – Digital Business &amp; Entrepreneurship</p>
-                <p class="org">Indian Institute of Management Bangalore</p>
-              </div>
-              <div class="col-4 text-end">
-                <span class="year-tag">2025</span>
-                <p class="meta">Currently Pursuing</p>
-              </div>
-            </div>
+        <div class="col-4">
+          <div class="edu-card">
+            <span class="year-tag">2025</span>
+            <p class="role mt-2">BBA – Digital Business &amp; Entrepreneurship</p>
+            <p class="org">Indian Institute of Management Bangalore</p>
+            <p class="meta">Currently Pursuing</p>
           </div>
-          <div class="edu-row">
-            <div class="row">
-              <div class="col-8">
-                <p class="role">Class XII</p>
-                <p class="org">NIOS</p>
-              </div>
-              <div class="col-4 text-end">
-                <span class="year-tag">2025</span>
-                <p class="meta">75%</p>
-              </div>
-            </div>
+        </div>
+        <div class="col-4">
+          <div class="edu-card">
+            <span class="year-tag">2025</span>
+            <p class="role mt-2">Class XII</p>
+            <p class="org">NIOS</p>
+            <p class="meta">75%</p>
           </div>
-          <div class="edu-row">
-            <div class="row">
-              <div class="col-8">
-                <p class="role">Class X</p>
-                <p class="org">DAV, Dalli Rajhara · CBSE</p>
-              </div>
-              <div class="col-4 text-end">
-                <span class="year-tag">2022</span>
-                <p class="meta">96.8%</p>
-              </div>
-            </div>
+        </div>
+        <div class="col-4">
+          <div class="edu-card">
+            <span class="year-tag">2022</span>
+            <p class="role mt-2">Class X</p>
+            <p class="org">DAV, Dalli Rajhara &nbsp;·&nbsp; CBSE</p>
+            <p class="meta">96.8%</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- TWO COLUMN: left col-8 / right col-4 -->
-    <div class="row mb-5">
-
-      <!-- LEFT: Experience + Professional Dev -->
-      <div class="col-8">
-
-        <section id="experience" class="mb-4">
-          <h2 class="section-label">Experience</h2>
-          <div class="card-block">
-            <div class="card-head">
-              <span class="role">Social Media Intern — The AI Decode</span>
-              <span class="meta">Nov 2025 – Present</span>
-            </div>
-            <p class="card-body-text">Create and schedule content across social platforms, develop engagement strategies, track performance analytics, and support community management to enhance brand presence and audience growth.</p>
-          </div>
-        </section>
-
-        <section id="profdev">
-          <h2 class="section-label">Professional Development</h2>
-          <div class="card-block">
-            <div class="card-head">
-              <span class="role">McKinsey &amp; Company</span>
-              <span class="meta">Sept 2025</span>
-            </div>
-            <p class="card-body-text">Selected for competitive program focused on digital strategy, data analysis, and communication for business leadership.</p>
-          </div>
-          <div class="card-block">
-            <div class="card-head">
-              <span class="role">E-Cell, IIT Bombay</span>
-              <span class="meta">Dec 2024</span>
-            </div>
-            <p class="card-body-text">Intensive bootcamp covering startup fundamentals, market validation, go-to-market strategies, and brand building.</p>
-          </div>
-        </section>
-
-      </div>
-
-      <!-- RIGHT: Skills -->
-      <div class="col-4">
-
-        <section id="skills">
-          <h2 class="section-label">Skills</h2>
-          <div class="skills-wrap">
-            <span class="skill-tag">Social Media Management</span>
-            <span class="skill-tag">Instagram · Facebook · LinkedIn</span>
-            <span class="skill-tag">Canva · CapCut</span>
-            <span class="skill-tag">Graphic Design</span>
-            <span class="skill-tag">Video Editing</span>
-            <span class="skill-tag">IG Insights Analytics</span>
-            <span class="skill-tag">Copywriting</span>
-            <span class="skill-tag">Hashtag Strategy</span>
-            <span class="skill-tag">Trend Research</span>
-            <span class="skill-tag">Creative Concepts</span>
-          </div>
-        </section>
-
+    <!-- EXPERIENCE -->
+    <div class="section-bar">Experience</div>
+    <div class="section-content">
+      <div class="exp-block">
+        <div class="exp-head">
+          <span class="role">Social Media Intern &mdash; The AI Decode</span>
+          <span class="meta">Nov 2025 – Present</span>
+        </div>
+        <p class="body-text">Create and schedule content across social platforms, develop engagement strategies, track performance analytics, and support community management to enhance brand presence and audience growth.</p>
       </div>
     </div>
 
-    <!-- CERTIFICATIONS — Bootstrap col-4 + col-4 + col-4 = 12 -->
-    <section id="certifications">
-      <h2 class="section-label">Certifications</h2>
+    <!-- PROFESSIONAL DEVELOPMENT -->
+    <div class="section-bar">Professional Development</div>
+    <div class="section-content">
+      <div class="row">
+        <div class="col-6">
+          <div class="exp-block">
+            <div class="exp-head">
+              <span class="role">McKinsey &amp; Company</span>
+              <span class="meta">Sept 2025</span>
+            </div>
+            <p class="body-text">Selected for competitive program focused on digital strategy, data analysis, and communication for business leadership.</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="exp-block">
+            <div class="exp-head">
+              <span class="role">E-Cell, IIT Bombay</span>
+              <span class="meta">Dec 2024</span>
+            </div>
+            <p class="body-text">Intensive bootcamp covering startup fundamentals, market validation, go-to-market strategies, and brand building.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section-bar">Certifications</div>
+    <div class="section-content">
       <div class="row">
         <div class="col-4">
           <div class="cert-card">
@@ -167,13 +132,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-  </main>
-
-  <footer id="footer">
-    <p>Ajeet Kumar Verma &mdash; Male · 19 · ajeetverma0012@gmail.com</p>
-  </footer>
+  </div><!-- end page-body -->
 
 </body>
 </html>
