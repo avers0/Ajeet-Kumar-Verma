@@ -33,6 +33,37 @@ p {
    ID SELECTORS
    ============================================ */
 
+/* Navbar — Flexbox */
+#navbar {
+  background-color: #c0152a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 2rem;
+}
+
+.nav-brand {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* Flexbox for nav links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fcd5d9;
+  font-size: 0.875rem;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
 /* Top banner — Flexbox column, centered */
 #top-banner {
   background-color: #c0152a;
@@ -43,6 +74,7 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  border-top: 1px solid #a01020;
 }
 
 #top-banner h1 {
@@ -83,9 +115,8 @@ p {
   border-bottom: 2px solid #c0152a;
 }
 
-/* Page body — 100vh viewport unit */
+/* Page body */
 #page-body {
-  min-height: 100vh;
   background-color: #ffffff;
 }
 
@@ -93,7 +124,7 @@ p {
    CLASS SELECTORS
    ============================================ */
 
-/* --- Skill tags --- */
+/* Skill tags */
 .skill-tag {
   background-color: #c0152a;
   color: #ffffff;
@@ -103,7 +134,7 @@ p {
   font-weight: 500;
 }
 
-/* --- Section bar (full-width red heading) --- */
+/* Section bar — full-width red heading */
 .section-bar {
   background-color: #c0152a;
   color: #ffffff;
@@ -115,22 +146,46 @@ p {
   margin-top: 1.25rem;
 }
 
-/* --- Section content wrapper --- */
+/* Section content wrapper */
 .section-content {
   padding: 1rem 2rem 0.5rem;
+  overflow: hidden;
 }
 
-/* --- Education cards — Bootstrap col-4 grid --- */
+/* Three-column layout — Flexbox */
+.three-col {
+  display: flex;
+  gap: 1rem;
+}
+
+.three-col > * {
+  flex: 1;
+}
+
+/* Two-column layout — Flexbox */
+.two-col {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.two-col > * {
+  flex: 1;
+}
+
+/* Education cards */
 .edu-card {
+  border-left: 4px solid #c0152a;
+  border: 1px solid #e8c8cc;
   border-left: 4px solid #c0152a;
   padding: 0.85rem 1rem;
   background-color: #fdf5f5;
-  border: 1px solid #e8c8cc;
-  border-left: 4px solid #c0152a;
-  height: 100%;
 }
 
-/* --- Experience blocks --- */
+.top-gap {
+  margin-top: 0.5rem;
+}
+
+/* Experience blocks */
 .exp-block {
   padding: 0.75rem 0;
   border-bottom: 1px solid #e8c8cc;
@@ -144,7 +199,7 @@ p {
   margin-bottom: 0.4rem;
 }
 
-/* --- Shared text --- */
+/* Shared text */
 .role {
   font-weight: 600;
   font-size: 0.95rem;
@@ -175,13 +230,12 @@ p {
   font-weight: 700;
 }
 
-/* --- Certification cards — Bootstrap col-4 grid --- */
+/* Certification cards */
 .cert-card {
   border: 1px solid #e8c8cc;
   border-top: 4px solid #c0152a;
   background-color: #fdf5f5;
   padding: 1rem;
-  height: 100%;
 }
 
 .cert-name {
@@ -189,4 +243,64 @@ p {
   font-size: 0.9rem;
   color: #c0152a;
   margin-bottom: 0.2rem;
+}
+
+/* ============================================
+   MEDIA QUERIES — Responsiveness
+   ============================================ */
+
+@media (max-width: 768px) {
+  #top-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  #contact-row {
+    gap: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .section-content {
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .three-col {
+    flex-direction: column;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .exp-head {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  #top-banner {
+    padding: 1.5rem 1rem;
+  }
+
+  #top-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  #skills-strip {
+    padding: 0.75rem 1rem;
+  }
+
+  .section-bar {
+    padding: 0.5rem 1rem;
+  }
 }
