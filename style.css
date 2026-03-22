@@ -1,269 +1,227 @@
-/* ===========================
-   Global Styles
-=========================== */
+/* ============================================
+   ELEMENT SELECTORS
+   ============================================ */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f4f6f9;
-    color: #333333;
-    font-size: 16px;
-    line-height: 1.6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f5f7;
+  color: #1c1c2e;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 a {
-    color: #1a73e8;
-    text-decoration: none;
+  text-decoration: none;
+  color: #2563eb;
 }
 
 a:hover {
-    text-decoration: underline;
+  color: #1d4ed8;
 }
 
+p {
+  margin-bottom: 0.4rem;
+}
 
-/* ===========================
-   Navigation Bar
-=========================== */
+strong {
+  font-weight: 600;
+}
 
+/* ============================================
+   ID SELECTORS
+   ============================================ */
+
+/* Navbar — Flexbox */
 #navbar {
-    background-color: #1b2a4a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 40px;
-    position: sticky;
-    top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background-color: #1c1c2e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.nav-name {
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
+/* Hero — 100vh viewport unit + Flexbox */
+#hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1c1c2e;
+  color: #ffffff;
+  padding: 2rem;
 }
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 28px;
-}
-
-.nav-links li a {
-    color: #c9d6e8;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.nav-links li a:hover {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-
-/* ===========================
-   Hero / About Section
-=========================== */
-
-#about {
-    background-color: #1b2a4a;
-    text-align: center;
-    padding: 70px 20px 60px;
-}
-
-.hero-box h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 42px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.tagline {
-    font-size: 17px;
-    color: #a8c0e0;
-    margin-bottom: 24px;
-}
-
-.contact-row {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-    font-size: 14px;
-    color: #c9d6e8;
-}
-
-.contact-row a {
-    color: #7eb8f7;
-}
-
-.contact-row a:hover {
-    color: #ffffff;
-}
-
-
-/* ===========================
-   Sections
-=========================== */
-
-.section {
-    padding: 50px 60px;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.section-alt {
-    background-color: #eaf0fb;
-    max-width: 100%;
-    padding: 50px 0;
-}
-
-.section-alt .section-title,
-.section-alt .card,
-.section-alt .skills-grid {
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.section-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #1b2a4a;
-    margin-bottom: 24px;
-    border-left: 5px solid #1a73e8;
-    padding-left: 12px;
-}
-
-
-/* ===========================
-   Cards
-=========================== */
-
-.card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 22px 26px;
-    margin-bottom: 16px;
-    border: 1px solid #dde3ed;
-}
-
-.section-alt .card {
-    background-color: #ffffff;
-    padding-left: 26px;
-    padding-right: 26px;
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 6px;
-}
-
-.card-header h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    color: #1b2a4a;
-}
-
-.year {
-    font-size: 13px;
-    color: #ffffff;
-    background-color: #1a73e8;
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.institution {
-    font-size: 15px;
-    font-weight: 600;
-    color: #1a73e8;
-    margin-bottom: 4px;
-}
-
-.detail {
-    font-size: 14px;
-    color: #555555;
-}
-
-.achievement-list {
-    list-style: none;
-    padding: 0;
-}
-
-.achievement-list li {
-    font-size: 15px;
-    color: #333333;
-    padding: 6px 0;
-    border-bottom: 1px solid #eef1f7;
-}
-
-.achievement-list li:last-child {
-    border-bottom: none;
-}
-
-
-/* ===========================
-   Skills Grid
-=========================== */
-
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.skill-card {
-    background-color: #ffffff;
-    border: 1px solid #dde3ed;
-    border-radius: 8px;
-    padding: 16px 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #1b2a4a;
-    width: calc(33% - 12px);
-    text-align: center;
-}
-
-.skill-sub {
-    font-size: 12px;
-    font-weight: 400;
-    color: #777777;
-    font-family: 'Open Sans', sans-serif;
-}
-
-
-/* ===========================
-   Footer
-=========================== */
 
 #footer {
-    background-color: #1b2a4a;
-    text-align: center;
-    padding: 24px 20px;
-    color: #8a9bbf;
-    font-size: 14px;
+  text-align: center;
+  padding: 2rem;
+  background-color: #1c1c2e;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 3rem;
 }
 
-#footer a {
-    color: #7eb8f7;
+/* ============================================
+   CLASS SELECTORS
+   ============================================ */
+
+/* --- Navbar --- */
+.nav-brand {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
 }
 
-#footer a:hover {
-    color: #ffffff;
+/* Flexbox for nav links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* --- Hero --- */
+#hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-sub {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Flexbox for contact bar */
+.contact-bar {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-bar a,
+.contact-bar span {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.contact-bar a:hover {
+  color: #ffffff;
+}
+
+/* --- Section label --- */
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+/* --- Education rows --- */
+.edu-row {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* --- Shared text classes --- */
+.role {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.org {
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+.meta {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.year-tag {
+  display: inline-block;
+  background-color: #1c1c2e;
+  color: #ffffff;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* --- Experience / Prof Dev cards --- */
+.card-block {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Flexbox for card header */
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+}
+
+.card-body-text {
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+/* --- Skills — Flexbox wrap --- */
+.skills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* --- Certification cards --- */
+.cert-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  height: 100%;
+}
+
+.cert-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
 }
