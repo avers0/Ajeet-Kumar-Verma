@@ -74,12 +74,13 @@ p {
 
 /* Skills strip — Flexbox wrap */
 #skills-strip {
-  background-color: #1a0000;
+  background-color: #f5e6e8;
   padding: 0.85rem 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   justify-content: center;
+  border-bottom: 2px solid #c0152a;
 }
 
 /* Page body — 100vh viewport unit */
@@ -111,27 +112,28 @@ p {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
 }
 
 /* --- Section content wrapper --- */
 .section-content {
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem 0.5rem;
 }
 
 /* --- Education cards — Bootstrap col-4 grid --- */
 .edu-card {
-  border-left: 3px solid #c0152a;
-  padding: 0.75rem 1rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+  border-left: 4px solid #c0152a;
+  padding: 0.85rem 1rem;
+  background-color: #fdf5f5;
+  border: 1px solid #e8c8cc;
+  border-left: 4px solid #c0152a;
   height: 100%;
 }
 
 /* --- Experience blocks --- */
 .exp-block {
   padding: 0.75rem 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e8c8cc;
 }
 
 /* Flexbox for exp header */
@@ -149,17 +151,17 @@ p {
 }
 
 .org {
-  color: #475569;
+  color: #333333;
   font-size: 0.875rem;
 }
 
 .meta {
-  color: #94a3b8;
+  color: #666666;
   font-size: 0.8rem;
 }
 
 .body-text {
-  color: #475569;
+  color: #333333;
   font-size: 0.875rem;
 }
 
@@ -175,8 +177,9 @@ p {
 
 /* --- Certification cards — Bootstrap col-4 grid --- */
 .cert-card {
-  border: 1px solid #e2e8f0;
-  border-top: 3px solid #c0152a;
+  border: 1px solid #e8c8cc;
+  border-top: 4px solid #c0152a;
+  background-color: #fdf5f5;
   padding: 1rem;
   height: 100%;
 }
